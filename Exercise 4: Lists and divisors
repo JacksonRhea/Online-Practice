@@ -1,0 +1,10 @@
+num = int(input("Please enter a number: "))
+
+divisors = range(1, num + 1)
+divList = []
+
+for element in divisors:
+    if num % element == 0:
+        divList.append(element)
+
+print(divList)
