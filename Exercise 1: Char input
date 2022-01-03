@@ -1,1 +1,11 @@
-print("hello")
+from datetime import datetime
+
+name = input("Please enter your name: ")
+age = input("Please enter your age: ")
+
+timeNow = datetime.now()
+currentYear = int(timeNow.year) + 100
+ageCentury = currentYear - int(age)
+
+print("Your name is " + name)
+print("You will turn 100 years old in the year " + str(ageCentury))
