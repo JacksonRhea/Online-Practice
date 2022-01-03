@@ -1,0 +1,19 @@
+evenOdd = int(input("Enter a number: "))
+
+if evenOdd % 2 == 0:
+    print(str(evenOdd) + " is even")
+
+    if evenOdd % 4 == 0:
+        print(str(evenOdd) + " is also divisible by 4")
+
+else:
+    print(str(evenOdd) + " is odd")
+
+num = int(input("Enter another number: "))
+check = int(input("Enter a number to divide into the previous number: "))
+
+if num % check == 0:
+    print(str(num) + " is divisible by " + str(check))
+
+else:
+    print(str(num) + " is not divisible by " + str(check))
