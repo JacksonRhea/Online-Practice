@@ -1,0 +1,35 @@
+import random
+
+#rock = 0, paper = 1, scissors = 2
+newMove = -1
+conditional = "no"
+playGame = input("Do you want to play Rock Paper Scissors? (yes/no): ")
+
+while playGame != conditional:
+    move = input("Enter your move (rock, paper, or scissors): ")
+    if move == "rock":
+        newMove = 0
+    if move == "paper":
+        newMove = 1
+    if move == "scissors":
+        newMove = 2
+    compMove = random.randint(0, 2)
+
+    if (newMove == 0 and compMove == 2) or (newMove == 1 and compMove == 0) or (newMove == 2 and compMove == 1):
+        print("Congratulations you won!")
+        if compMove == 0:
+            print("The computer had rock")
+        if compMove == 1:
+            print("The computer had paper")
+        if compMove == 2:
+            print("The computer had scissors")
+        playGame = input("Do you want to play Rock Paper Scissors? (yes/no): ")
+    else:
+        print("Retry")
+        if compMove == 0:
+            print("The computer had rock")
+        if compMove == 1:
+            print("The computer had paper")
+        if compMove == 2:
+            print("The computer had scissors")
+        playGame = input("Do you want to play Rock Paper Scissors? (yes/no): ")
