@@ -1,0 +1,12 @@
+word = input("Please enter a word: ")
+palindrome = []
+palindromeReverse = []
+
+for letters in word:
+    palindrome.append(letters)
+    palindromeReverse.append(letters)
+
+palindromeReverse.reverse()
+
+if palindrome == palindromeReverse:
+    print("The word " + word + " is a palindrome.")
