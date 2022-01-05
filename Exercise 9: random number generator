@@ -1,0 +1,27 @@
+import random
+
+playAgain = "yes"
+count = 0
+
+while playAgain == "yes":
+    count = 0
+    randNum = random.randint(1, 9)
+    numGuess = int(input("Guess the computer's number 1-9: "))
+
+    while numGuess != randNum:
+
+        if numGuess < randNum:
+            print("Too low! Enter another number.")
+            count += 1
+            numGuess = int(input("Guess the computer's number 1-9: "))
+
+        if numGuess > randNum:
+            print("Too high! Enter another number.")
+            count += 1
+            numGuess = int(input("Guess the computer's number 1-9: "))
+
+    if numGuess == randNum:
+        print("Correct!!!")
+        count += 1
+        print("The random number was " + str(randNum) + " and took you " + str(count) + " tries!")
+        playAgain = input("Do you want to try again? (yes/no): ")
