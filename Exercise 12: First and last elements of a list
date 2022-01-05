@@ -1,0 +1,5 @@
+a = [5, 10, 15, 20, 25]
+def firstLastList():
+    print(str(a[0]) + ", " +  str(a[len(a) - 1]))
+
+firstLastList()
