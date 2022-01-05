@@ -1,0 +1,21 @@
+def startNum():
+    return int(input("Enter any number: "))
+
+def is_prime():
+    divisors = range(1, num + 1)
+    divList = []
+
+    for element in divisors:
+        if num % element == 0:
+            divList.append(element)
+
+    if len(divList) > 2:
+        return False
+    else:
+        return True
+
+num = startNum()
+if is_prime():
+    print(str(num) + " is prime!")
+else:
+    print(str(num) + " is not prime.")
